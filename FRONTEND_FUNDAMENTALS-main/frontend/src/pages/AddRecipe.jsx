@@ -1,0 +1,2 @@
+﻿import RecipeForm from "../components/RecipeForm";
+export default function AddRecipe() { return <main><section className="add-hero"><p>ADD SOMETHING DELICIOUS</p><h1>Share a recipe with your future self.</h1><span>Save the ingredients and steps to your next cooking session is easy.</span></section><section className="form-card"><div className="form-title"><b>✎</b><div><h2>Recipe details</h2><p>Fields marked with * are required.</p></div></div><RecipeForm /></section></main>; }
