@@ -1,3 +1,3 @@
-﻿import { useRecipes } from "../context/RecipeContext";
+﻿import { useRecipes } from "../context/useRecipes";
 import RecipeCard from "../components/RecipeCard";
 export default function Favorities() { const { recipes, favorites } = useRecipes(); const saved = recipes.filter((recipe) => favorites.includes(recipe.id)); return <main><section className="explore-heading"><h1>Your favorite <em>recipes.</em></h1><span>{saved.length} saved recipes</span></section>{saved.length ? <section className="recipe-grid">{saved.map((recipe) => <RecipeCard recipe={recipe} key={recipe.id} />)}</section> : <section className="empty-state"><div>♡</div><h2>No favorites yet</h2><p>Tap the heart on a recipe to keep it here.</p></section>}</main>; }

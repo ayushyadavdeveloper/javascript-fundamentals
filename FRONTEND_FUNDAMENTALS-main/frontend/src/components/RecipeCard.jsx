@@ -1,5 +1,5 @@
 ﻿import { Link } from "react-router-dom";
-import { useRecipes } from "../context/RecipeContext";
+import { useRecipes } from "../context/useRecipes";
 
 export default function RecipeCard({ recipe }) {
   const { favorites, toggleFavorite } = useRecipes();

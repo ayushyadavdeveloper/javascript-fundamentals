@@ -1,6 +1,6 @@
 ﻿import { useMemo, useState } from "react";
 import RecipeCard from "../components/RecipeCard";
-import { useRecipes } from "../context/RecipeContext";
+import { useRecipes } from "../context/useRecipes";
 
 export default function Home() {
   const { recipes } = useRecipes(); const [search, setSearch] = useState(""); const [category, setCategory] = useState("All");

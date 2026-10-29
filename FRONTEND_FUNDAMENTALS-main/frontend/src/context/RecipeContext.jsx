@@ -1,6 +1,5 @@
-﻿import { createContext, useContext, useEffect, useMemo, useState } from "react";
-
-const RecipeContext = createContext();
+﻿import { useEffect, useMemo, useState } from "react";
+import { RecipeContext } from "./RecipeContextValue";
 
 const starterRecipes = [
   { id: "creamy-tomato-pasta", title: "Creamy Tomato Pasta", description: "A comforting pasta tossed in a silky tomato and cream sauce with fresh basil.", category: "Dinner", difficulty: "Easy", time: 25, servings: 2, image: "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=900&q=80", ingredients: ["250g pasta", "2 cups cherry tomatoes", "1/2 cup cream", "Fresh basil", "Parmesan"], steps: ["Cook the pasta until al dente.", "Sauté tomatoes, then stir in cream.", "Toss pasta through the sauce and finish with basil."], rating: 4.8 },
@@ -28,5 +27,3 @@ export function RecipeProvider({ children }) {
   const value = useMemo(() => ({ recipes, favorites, toggleFavorite, addRecipe, deleteRecipe }), [recipes, favorites]);
   return <RecipeContext.Provider value={value}>{children}</RecipeContext.Provider>;
 }
-
-export function useRecipes() { return useContext(RecipeContext); }

@@ -1,6 +1,6 @@
 ﻿import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useRecipes } from "../context/RecipeContext";
+import { useRecipes } from "../context/useRecipes";
 
 const blank = { title: "", description: "", ingredients: "", steps: "", category: "Dinner", difficulty: "Easy", time: "30", servings: "2", image: "" };
 
